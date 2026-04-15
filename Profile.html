@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <style>
+        body {
+            background-color: #e6f0f9;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 600px;
+        }
+
+        h1 {
+            color: black;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 4px solid darkgreen;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border: 1px solid black;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: black;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: black;
+            line-height: 1.5;
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .btnone {
+            background-color: #2196f3;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 3px;
+            margin-bottom: 20px;
+        }
+
+        .btnone:hover {
+            background-color: #1976d2;
+        }
+
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: black;
+            font-size: 14px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        .btntwo {
+            background-color: #1e8b3c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .btntwo:hover {
+            background-color: #15662b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>My Profile</h1>
+
+        <img src="https://upload.wikimedia.org/wikipedia/en/f/fd/Tommy_Shelby.jpg" alt="Profile Picture" class="profile-img">
+
+        <div class="card">
+            <h2>About Me</h2>
+            <p>Thomas Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam architecto assumenda culpa cupiditate deleniti esse ex excepturi explicabo, in incidunt magni nostrum perspiciatis porro quo quod repudiandae totam veniam?“Tommy” Shelby is a smart and fearless leader from Birmingham, England. He is the head of the Shelby family and the boss of the Peaky Blinders gang. Known for his sharp mind and calm personality, Tommy always thinks ahead and plans carefully.</p>
+        </div>
+
+        <div class="card">
+            <h2>Objective</h2>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aspernatur dignissimos doloremque doloribus illo inventore ipsam modi officia perspiciatis, quae, reiciendis rem vero! Accusamus culpa facilis labore modi tempora, velit?</p>
+        </div>
+
+        <button class="btnone">Get Connected?</button>
+
+        <div class="card">
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                <button type="submit" class="btntwo">Submit</button>
+            </form>
+        </div>
+
+    </div>
+
+    <script>
+        const form = document.getElementById('contactForm');
+
+        form.addEventListener('submit',  clickMe )
+         function clickMe () {
+             alert("You sumitted me!")
+
+        };
+    </script>
+
+</body>
+</html>
