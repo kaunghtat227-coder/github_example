@@ -4,4 +4,5 @@ class Product:
         self.price = price
 
     def to_string(self):
-        return f"{self.name} {self.price}"
+         
+        return f"{self.name},{self.price}"
