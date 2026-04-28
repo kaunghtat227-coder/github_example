@@ -1,0 +1,35 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+</head>
+<body>
+    <p><a href="/product">Create One</a></p>
+    <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if not proudct_list %}
+            <tr>
+                <td colspan="2">No Record. </td>
+            </tr>
+            {% endif %}
+            {% for product in proudct_list %}
+            <tr>
+                <td>{{ product.name }}</td>
+                <td>{{ product.price }}</td>
+                <td> 
+                <a href="/product/edit/{{loop.index0}}">Edit</a>
+                <form method="post" action="/product/{{ loop.index0 }}" style="display:inline ;">
+                    <button type="submit" onclick="return confirm('Are you sure want to delete?')">Delete</button>
+                </form>
+               </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
